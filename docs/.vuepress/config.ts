@@ -2,6 +2,7 @@ import { defineUserConfig } from 'vuepress'
 import type { DefaultThemeOptions } from 'vuepress'
 
 export default defineUserConfig<DefaultThemeOptions>({
+  dest: 'output',
   lang: 'en-US',
   title: 'GreenZoo Table Of Contents',
   description: 'GreenZoo Table Of Contents',
