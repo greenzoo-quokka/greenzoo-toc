@@ -5,7 +5,7 @@ export default defineUserConfig<DefaultThemeOptions>({
   base: '/greenzoo-toc/',
   dest: 'docs',
   lang: 'en-US',
-  title: 'GreenZoo Table Of Contents',
+  title: 'GreenZoo Table Of Contents Test',
   description: 'GreenZoo Table Of Contents',
 
   themeConfig: {
