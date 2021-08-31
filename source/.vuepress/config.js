@@ -1,15 +1,12 @@
 module.exports = {
   //theme: 'greenzoo',
   //theme: path.resolve(__dirname, '.vuepress/theme'),
-  base: '/greenzoo-toc/',
+  dest : "docs",
+  //base: './',
   //dest: 'docs',
   lang: 'en-US',
   title: 'GreenZoo 기술문서',
   description: 'GreenZoo Table Of Contents',
-  plugins:[
-    ['markdown-it-plantuml'],
-    [require('markdown-it-plantuml')],
-  ],
   // chainWebpack(config) {
   //   config.externals([/^(vue|vue-router)$/])
   // },
