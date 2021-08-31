@@ -8,7 +8,13 @@ export const data = {
   "headers": [],
   "filePathRelative": "contributing.md",
   "git": {
-    "updatedTime": null,
-    "contributors": []
+    "updatedTime": 1630389758000,
+    "contributors": [
+      {
+        "name": "KwonHyuck",
+        "email": "kwonhyuck0218@gmail.com",
+        "commits": 1
+      }
+    ]
   }
 }
