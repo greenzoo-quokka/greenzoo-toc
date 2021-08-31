@@ -1,5 +1,5 @@
 export const siteData = {
-  "base": "greenzoo-toc",
+  "base": "/",
   "lang": "en-US",
   "title": "GreenZoo Table Of Contents",
   "description": "GreenZoo Table Of Contents",
