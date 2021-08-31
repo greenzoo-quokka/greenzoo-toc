@@ -2,7 +2,7 @@ module.exports = {
   //theme: 'greenzoo',
   //theme: path.resolve(__dirname, '.vuepress/theme'),
   dest : "docs",
-  //base: './',
+  base: '/greenzoo-toc/',
   //dest: 'docs',
   lang: 'en-US',
   title: 'GreenZoo 기술문서',
