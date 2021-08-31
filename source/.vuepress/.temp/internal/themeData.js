@@ -1,12 +1,6 @@
 export const themeData = {
   "logo": "https://vuejs.org/images/logo.png",
-  "nav": [
-    {
-      "text": "Home",
-      "link": "/"
-    }
-  ],
-  "sidebar": "auto",
+  "search": true,
   "locales": {
     "/": {
       "selectLanguageName": "English"
@@ -17,6 +11,7 @@ export const themeData = {
   "repo": null,
   "selectLanguageText": "Languages",
   "selectLanguageAriaLabel": "Select language",
+  "sidebar": "auto",
   "sidebarDepth": 2,
   "editLink": true,
   "editLinkText": "Edit this page",
@@ -34,4 +29,17 @@ export const themeData = {
   "openInNewWindow": "open in new window",
   "toggleDarkMode": "toggle dark mode",
   "toggleSidebar": "toggle sidebar"
+}
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updateThemeData) {
+    __VUE_HMR_RUNTIME__.updateThemeData(themeData)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ themeData }) => {
+    __VUE_HMR_RUNTIME__.updateThemeData(themeData)
+  })
 }
