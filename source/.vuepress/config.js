@@ -1,4 +1,7 @@
-module.exports = {
+// .vuepress/config.js
+const { config } = require("vuepress-theme-hope");
+
+module.exports = config({
   //theme: 'greenzoo',
   //theme: path.resolve(__dirname, '.vuepress/theme'),
   dest : "docs",
@@ -7,37 +10,11 @@ module.exports = {
   lang: 'en-US',
   title: 'GreenZoo 기술문서',
   description: 'GreenZoo Table Of Contents',
-  // chainWebpack(config) {
-  //   config.externals([/^(vue|vue-router)$/])
-  // },
-
-  themeConfig: {
-    logo: 'https://vuejs.org/images/logo.png',
-    sidebarDepth : 10,
-    search: true, // 검색기능
-    nav: [// 상단 메뉴
-      { text: 'Home', link: '/' }, 
-      { text: 'Blog', link: 'https://greenzoo.tistory.com'},
-      { text: 'GitHub', link: 'https://github.com/greenzoo-quokka'},
-    ],
-    sidebar: 'auto', // 사이드바 사용 여부. auto로 하면 content의 내용이 반영된다.
-    smoothScroll: true // 부드러운 스크롤 사용 여부
-    // nav: [
-    //   { text: 'Home', link: '/' },
-    //   { text: 'About', link: '/about.html' },
-    //   { text: '서브메뉴',
-    //       items: [
-    //           { text: '메뉴１', link: '/' },
-    //           { text: '메뉴２', link: '/about.html' },
-    //       ]
-    //   }
-    // ],
-    // sidebar: [　//사이드바 링크
-    //     ['/', '사이드바 메뉴１'],
-    //     ['/about.html', '사이드바 메뉴２'],
-    // ]
+  markdown: {
+    extendMarkdown: md => {
+      md.use(require('markdown-it-plantuml'))
+    }
   },
-  
   module: {
     rules: [
       // ... other rules omitted
@@ -54,10 +31,126 @@ module.exports = {
       }
     ]
   },
-  
-  markdown: {
-    extendMarkdown: md => {
-      md.use(require('markdown-it-plantuml'))
-    }
-  }
-}
+  plugins: [
+    [
+      "md-enhance",
+      {
+        // Enable flowchart
+        flowchart: true,
+      },
+    ],
+    ["@vuepress/back-to-top"],
+    // [
+    //   "@mr-hope/comment",
+    //   {
+    //     // your options
+    //   },
+    // ],
+  ],  
+  globalUIComponents: [
+    // '@mr-hope/comment',
+    "back-to-top",
+  ],
+  themeConfig: {
+    logo: 'https://vuejs.org/images/logo.png',
+    breadcrumb : true,
+    sidebarDepth : 10,
+    search: true, // 검색기능
+    nav: [// 상단 메뉴
+      { text: 'Home', link: '/' }, 
+      { text: 'Blog', link: 'https://greenzoo.tistory.com'},
+      { text: 'GitHub', link: 'https://github.com/greenzoo-quokka'},
+    ],
+    sidebar : [
+      {
+        title: "GreenZoo",
+        path: "/",
+        collapsable: true,
+        children: []
+      },
+      {
+          title: "Spring Boot 프로젝트",
+          path: "/projects",
+          icon: "creative",
+          collapsable: true,
+          children: [
+            {
+              title: "GreenZoo-Actuator",
+              path: "/projects/actuator",
+              icon: "page",
+              collapsable: false,
+              children: [],
+            },
+            {
+              title: "GreenZoo-Doc",
+              path: "/projects/doc",
+              icon: "page",
+              collapsable: false,
+              children: [],
+            },
+            {
+              title: "GreenZoo-Jpa",
+              path: "/projects/jpa",
+              icon: "page",
+              collapsable: false,
+              children: [],
+            },
+            {
+              title: "GreenZoo-Logger",
+              path: "/projects/logger",
+              icon: "page",
+              collapsable: false,
+              children: [],
+            },
+            {
+              title: "GreenZoo-OAuth2",
+              path: "/projects/oauth2",
+              icon: "page",
+              collapsable: false,
+              children: [],
+            },
+            {
+              title: "GreenZoo-RestTdd",
+              path: "/projects/resttdd",
+              icon: "page",
+              collapsable: false,
+              children: [],
+            },
+          ],
+      },      
+      {
+        title: "VuePress 플러그인",
+        path: "/plugins",
+        collapsable: true,
+        children: [
+          {
+            title: "PlantUML",
+            path: "/plugins/plantuml",
+            icon: "page",
+            collapsable: false,
+            children: [],
+          },
+          {
+            title: "FlowChart",
+            path: "/plugins/flowchart",
+            icon: "page",
+            collapsable: false,
+            children: [],
+          },
+          {
+            title: "MarkDown",
+            path: "/plugins/markdown",
+            icon: "page",
+            collapsable: false,
+            children: [],
+          },
+        ]
+      },
+    ],
+    smoothScroll: true, // 부드러운 스크롤 사용 여부
+    backToTop : true,
+    mdEnhance: {
+      flowchart: true,
+    },
+  },
+});

@@ -40,6 +40,9 @@
         <slot name="page-bottom" />
       </template>
     </Page>
+    <Comment />
+
+    
   </div>
 </template>
 
@@ -48,6 +51,7 @@ import Home from '@theme/components/Home.vue'
 import Navbar from '@theme/components/Navbar.vue'
 import Page from '@theme/components/Page.vue'
 import Sidebar from '@theme/components/Sidebar.vue'
+import Comment from "../components/Comment";
 import { resolveSidebarItems } from '../util'
 
 export default {
@@ -57,7 +61,8 @@ export default {
     Home,
     Page,
     Sidebar,
-    Navbar
+    Navbar,
+    Comment
   },
 
   data () {

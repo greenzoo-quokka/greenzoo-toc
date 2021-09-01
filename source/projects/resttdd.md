@@ -1,4 +1,4 @@
-# greenzoo-resttdd
+# GreenZoo-RestTdd
 * RESTAPI + TDD 프로젝트
 
 * 참고사이트

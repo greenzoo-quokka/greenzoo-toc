@@ -2,10 +2,19 @@
   "scripts": {
     "dev": "vuepress dev source",
     "build": "vuepress build source",
-    "eject": "vuepress eject"
+    "eject": "vuepress eject",
+    "docs:build": "vuepress build ./",
+    "docs:clean-dev": "vuepress dev ./ --no-cache",
+    "docs:dev": "vuepress dev ./",
+    "docs:eject-theme": "vuepress eject-hope ./"
   },
   "dependencies": {
     "markdown-it-plantuml": "^1.4.1",
-    "vuepress": "^1.8.2"
+    "@mr-hope/vuepress-plugin-comment": "^1.20.1",
+    "@vuepress/plugin-back-to-top": "^1.8.2"
+  },
+  "devDependencies": {
+    "vuepress": "^1.8.2",
+    "vuepress-theme-hope": "^1.20.2"
   }
 }

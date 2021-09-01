@@ -20,3 +20,10 @@ export default {
   }
 }
 </script>
+<style lang="stylus">
+.utterances {
+  float: left;
+  margin-left: 22rem;
+  max-width: 67%;
+}
+</style>
