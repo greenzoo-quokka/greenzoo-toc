@@ -15,6 +15,7 @@ module.exports = config({
       md.use(require('markdown-it-plantuml'))
     }
   },
+  evergreen: true,
   module: {
     rules: [
       // ... other rules omitted
@@ -28,6 +29,18 @@ module.exports = config({
           'css-loader',
           'sass-loader'
         ]
+      },
+      {
+        test: /\.jsx?$/,
+        use: [
+          'babel-loader'
+        ]
+      },
+      {
+        test: /\.js?$/,
+        use: [
+          'babel-loader'
+        ]
       }
     ]
   },
@@ -40,6 +53,51 @@ module.exports = config({
       },
     ],
     ["@vuepress/back-to-top"],
+    [
+      "vuepress-plugin-anchor-toc",
+      {
+        showDepth: 2,
+        customClass: 'right-list',
+        ignore: [
+          // more...
+        ]
+      }
+    ]
+    // [
+    //   'vuepress-plugin-right-anchor',
+    //   {
+    //     showDepth: 1,
+    //     //customClass: 'right-list',
+    //     ignore: [
+    //       '/',
+    //       '/api/'
+    //       // more...
+    //     ],
+    //     expand: {
+    //       trigger: 'hover',
+    //       clickModeDefaultOpen: true
+    //     },
+    //     customClass: 'right-list',
+    //     disableGlobalUI: false,
+    //   }
+    // ]
+    // [
+    //   'vuepress-plugin-right-anchor',
+    //   {
+    //     showDepth: 1,
+    //     ignore: [
+    //       '/',
+    //       '/api/'
+    //       // more...
+    //     ],
+    //     expand: {
+    //       trigger: 'hover',
+    //       clickModeDefaultOpen: true
+    //     },
+    //     customClass: 'your-customClass',
+    //     disableGlobalUI: false,
+    //   }
+    // ],
     // [
     //   "@mr-hope/comment",
     //   {
@@ -67,6 +125,13 @@ module.exports = config({
         path: "/",
         collapsable: true,
         children: []
+      },
+      {
+        title: "Cheat Sheet",
+        path: "/cheatsheet",
+        collapsable: true,
+        children: [
+        ]
       },
       {
           title: "Spring Boot 프로젝트",
@@ -117,7 +182,7 @@ module.exports = config({
               children: [],
             },
           ],
-      },      
+      },
       {
         title: "VuePress 플러그인",
         path: "/plugins",
