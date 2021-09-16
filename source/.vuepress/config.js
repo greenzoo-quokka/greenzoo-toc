@@ -50,6 +50,8 @@ module.exports = config({
       {
         // Enable flowchart
         flowchart: true,
+        mermaid: true,
+        demo: true,
       },
     ],
     ["@vuepress/back-to-top"],
@@ -62,7 +64,13 @@ module.exports = config({
           // more...
         ]
       }
-    ]
+    ],
+    [
+      "@mr-hope/copy-code",
+      {
+        // your options
+      },
+    ],
     // [
     //   'vuepress-plugin-right-anchor',
     //   {
@@ -110,6 +118,7 @@ module.exports = config({
     "back-to-top",
   ],
   themeConfig: {
+    copyCode: {},
     logo: 'https://vuejs.org/images/logo.png',
     breadcrumb : true,
     sidebarDepth : 10,
@@ -125,6 +134,42 @@ module.exports = config({
         path: "/",
         collapsable: true,
         children: []
+      },
+      // {
+      //   title: "Project",
+      //   path: "/projects",
+      //   collapsable: true,
+      //   children: [
+      //     {
+      //       title: "FlowChart",
+      //       path: "/plugins/flowchart",
+      //       icon: "page",
+      //       collapsable: false,
+      //       children: [],
+      //     },
+      //     {
+      //       title: "LoB : 리그오브분리수거",
+      //       path: "/projects/lob",
+      //       icon: "page",
+      //       collapsable: false,
+      //       children: [],
+      //     },
+      //   ]
+      // },
+      {
+        title: "LoB : 리그오브분리수거",
+        path: "/lob",
+        icon: "page",
+        collapsable: true,
+        children: [],
+      },
+      {
+        title: "MarkDraw",
+        path: "/markdraw",
+        icon: "page",
+        collapsable: true,
+        children: [
+        ],
       },
       {
         title: "Cheat Sheet",
@@ -205,6 +250,20 @@ module.exports = config({
           {
             title: "MarkDown",
             path: "/plugins/markdown",
+            icon: "page",
+            collapsable: false,
+            children: [],
+          },
+          {
+            title: "MerMaid",
+            path: "/plugins/mermaid",
+            icon: "page",
+            collapsable: false,
+            children: [],
+          },
+          {
+            title: "Demo",
+            path: "/plugins/demo",
             icon: "page",
             collapsable: false,
             children: [],
