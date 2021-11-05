@@ -176,6 +176,62 @@ module.exports = config({
         path: "/cheatsheet",
         collapsable: true,
         children: [
+          {
+            title: "GIT",
+            path: "/cheatsheets/git",
+            icon: "page",
+            collapsable: false,
+            children: [],
+          },
+          {
+            title: "SQL",
+            path: "/cheatsheets/sql",
+            icon: "page",
+            collapsable: false,
+            children: [],
+          },
+          {
+            title: "Docker",
+            path: "/cheatsheets/docker",
+            icon: "page",
+            collapsable: false,
+            children: [],
+          },
+          {
+            title: "Kubernetes",
+            path: "/cheatsheets/kubernetes",
+            icon: "page",
+            collapsable: false,
+            children: [],
+          },
+          {
+            title: "Nodejs",
+            path: "/cheatsheets/nodejs",
+            icon: "page",
+            collapsable: false,
+            children: [],
+          },
+          {
+            title: "Redis",
+            path: "/cheatsheets/redis",
+            icon: "page",
+            collapsable: false,
+            children: [],
+          },
+          {
+            title: "리눅스/도스명령어",
+            path: "/cheatsheets/linux",
+            icon: "page",
+            collapsable: false,
+            children: [],
+          },
+          {
+            title: "ReactNative",
+            path: "/cheatsheets/react",
+            icon: "page",
+            collapsable: false,
+            children: [],
+          },
         ]
       },
       {
