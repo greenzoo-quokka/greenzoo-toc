@@ -33,6 +33,7 @@ git config --local user.email greenzoo.quokka@gmail.com
 git remote add origin ~.git
 
 -- 5. Git Commit and Merge
+git add *
 git commit -am "Init Project"
 
 -- 6. Push
