@@ -10,7 +10,7 @@ meta:
   content: 치트시트
 ---
 
-# React Native
+# Expo
 
 ## 개발환경설정
 ```batch
@@ -33,13 +33,33 @@ sudo npm install -g n
 sudo n install [특정버전]
 ```
 
+## Expo 설치
+```batch
+-- Expo 설치
+npm install expo-cli --global
+```
+
 ## 프로젝트 실행
 ```batch
-react-native run-android
+-- expo start 와 동일
+npm start
 ```
 
-## 안드로이드 디바이스 재연결시
-```batch
-adb reverse tcp:8081 tcp:8081
+## 프로젝트 소스코드 구조
 ```
-
+[Project]
+├─ ...
+├─ assets // 정적파일폴더
+│  ├─ *.jpg
+│  ├─ *.png
+│  ├─ *.css
+│  └─ ...
+├─ components // 컴포넌트 모듈 폴더
+│  ├─ CustomButton.js
+│  ├─ *.js
+│  └─ ...
+└─ screens // 화면전환 모듈 폴더
+   ├─ Screen1.js
+   ├─ Screen2.js
+   └─ ...
+```

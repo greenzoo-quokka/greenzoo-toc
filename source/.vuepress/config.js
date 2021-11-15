@@ -4,7 +4,7 @@ const { config } = require("vuepress-theme-hope");
 module.exports = config({
   //theme: 'greenzoo',
   //theme: path.resolve(__dirname, '.vuepress/theme'),
-  dest : "docs",
+  dest: "docs",
   base: '/greenzoo-toc/',
   //dest: 'docs',
   lang: 'en-US',
@@ -112,7 +112,7 @@ module.exports = config({
     //     // your options
     //   },
     // ],
-  ],  
+  ],
   globalUIComponents: [
     // '@mr-hope/comment',
     "back-to-top",
@@ -120,15 +120,15 @@ module.exports = config({
   themeConfig: {
     copyCode: {},
     logo: 'https://vuejs.org/images/logo.png',
-    breadcrumb : true,
-    sidebarDepth : 10,
+    breadcrumb: true,
+    sidebarDepth: 10,
     search: true, // 검색기능
     nav: [// 상단 메뉴
-      { text: 'Home', link: '/' }, 
-      { text: 'Blog', link: 'https://greenzoo.tistory.com'},
-      { text: 'GitHub', link: 'https://github.com/greenzoo-quokka'},
+      { text: 'Home', link: '/' },
+      { text: 'Blog', link: 'https://greenzoo.tistory.com' },
+      { text: 'GitHub', link: 'https://github.com/greenzoo-quokka' },
     ],
-    sidebar : [
+    sidebar: [
       {
         title: "GreenZoo",
         path: "/",
@@ -232,57 +232,64 @@ module.exports = config({
             collapsable: false,
             children: [],
           },
+          {
+            title: "Expo",
+            path: "/cheatsheets/expo",
+            icon: "page",
+            collapsable: false,
+            children: [],
+          },
         ]
       },
       {
-          title: "Spring Boot 프로젝트",
-          path: "/projects",
-          icon: "creative",
-          collapsable: true,
-          children: [
-            {
-              title: "GreenZoo-Actuator",
-              path: "/projects/actuator",
-              icon: "page",
-              collapsable: false,
-              children: [],
-            },
-            {
-              title: "GreenZoo-Doc",
-              path: "/projects/doc",
-              icon: "page",
-              collapsable: false,
-              children: [],
-            },
-            {
-              title: "GreenZoo-Jpa",
-              path: "/projects/jpa",
-              icon: "page",
-              collapsable: false,
-              children: [],
-            },
-            {
-              title: "GreenZoo-Logger",
-              path: "/projects/logger",
-              icon: "page",
-              collapsable: false,
-              children: [],
-            },
-            {
-              title: "GreenZoo-OAuth2",
-              path: "/projects/oauth2",
-              icon: "page",
-              collapsable: false,
-              children: [],
-            },
-            {
-              title: "GreenZoo-RestTdd",
-              path: "/projects/resttdd",
-              icon: "page",
-              collapsable: false,
-              children: [],
-            },
-          ],
+        title: "Spring Boot 프로젝트",
+        path: "/projects",
+        icon: "creative",
+        collapsable: true,
+        children: [
+          {
+            title: "GreenZoo-Actuator",
+            path: "/projects/actuator",
+            icon: "page",
+            collapsable: false,
+            children: [],
+          },
+          {
+            title: "GreenZoo-Doc",
+            path: "/projects/doc",
+            icon: "page",
+            collapsable: false,
+            children: [],
+          },
+          {
+            title: "GreenZoo-Jpa",
+            path: "/projects/jpa",
+            icon: "page",
+            collapsable: false,
+            children: [],
+          },
+          {
+            title: "GreenZoo-Logger",
+            path: "/projects/logger",
+            icon: "page",
+            collapsable: false,
+            children: [],
+          },
+          {
+            title: "GreenZoo-OAuth2",
+            path: "/projects/oauth2",
+            icon: "page",
+            collapsable: false,
+            children: [],
+          },
+          {
+            title: "GreenZoo-RestTdd",
+            path: "/projects/resttdd",
+            icon: "page",
+            collapsable: false,
+            children: [],
+          },
+        ],
       },
       {
         title: "VuePress 플러그인",
@@ -328,7 +335,7 @@ module.exports = config({
       },
     ],
     smoothScroll: true, // 부드러운 스크롤 사용 여부
-    backToTop : true,
+    backToTop: true,
     mdEnhance: {
       flowchart: true,
     },
