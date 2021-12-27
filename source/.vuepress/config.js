@@ -129,11 +129,32 @@ module.exports = config({
       { text: 'GitHub', link: 'https://github.com/greenzoo-quokka' },
     ],
     sidebar: [
+      // {
+      //   title: "GreenZoo",
+      //   path: "/",
+      //   collapsable: true,
+      //   children: []
+      // },
       {
         title: "GreenZoo",
         path: "/",
         collapsable: true,
-        children: []
+        children: [
+          {
+            title: "소개",
+            path: "/greenzoo/intro",
+            icon: "page",
+            collapsable: false,
+            children: [],
+          },
+          {
+            title: "기능개발",
+            path: "/greenzoo/function",
+            icon: "page",
+            collapsable: false,
+            children: [],
+          },
+        ]
       },
       // {
       //   title: "Project",
@@ -156,13 +177,13 @@ module.exports = config({
       //     },
       //   ]
       // },
-      {
-        title: "LoB : 리그오브분리수거",
-        path: "/lob",
-        icon: "page",
-        collapsable: true,
-        children: [],
-      },
+      // {
+      //   title: "LoB : 리그오브분리수거",
+      //   path: "/lob",
+      //   icon: "page",
+      //   collapsable: true,
+      //   children: [],
+      // },
       {
         title: "MarkDraw",
         path: "/markdraw",
@@ -232,13 +253,13 @@ module.exports = config({
             collapsable: false,
             children: [],
           },
-          {
-            title: "Expo",
-            path: "/cheatsheets/expo",
-            icon: "page",
-            collapsable: false,
-            children: [],
-          },
+          // {
+          //   title: "Expo",
+          //   path: "/cheatsheets/expo",
+          //   icon: "page",
+          //   collapsable: false,
+          //   children: [],
+          // },
         ]
       },
       {
