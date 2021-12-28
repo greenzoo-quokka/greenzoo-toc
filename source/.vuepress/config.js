@@ -198,6 +198,13 @@ module.exports = config({
         collapsable: true,
         children: [
           {
+            title: "단축키",
+            path: "/cheatsheets/shortcut",
+            icon: "page",
+            collapsable: false,
+            children: [],
+          },
+          {
             title: "GIT",
             path: "/cheatsheets/git",
             icon: "page",
