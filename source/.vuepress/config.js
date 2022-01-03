@@ -198,6 +198,13 @@ module.exports = config({
         collapsable: true,
         children: [
           {
+            title: "Spring",
+            path: "/cheatsheets/spring",
+            icon: "page",
+            collapsable: false,
+            children: [],
+          },
+          {
             title: "단축키",
             path: "/cheatsheets/shortcut",
             icon: "page",
