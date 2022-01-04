@@ -205,6 +205,20 @@ module.exports = config({
             children: [],
           },
           {
+            title: "Server",
+            path: "/cheatsheets/server",
+            icon: "page",
+            collapsable: false,
+            children: [],
+          },
+          {
+            title: "DataBase",
+            path: "/cheatsheets/dbserver",
+            icon: "page",
+            collapsable: false,
+            children: [],
+          },
+          {
             title: "단축키",
             path: "/cheatsheets/shortcut",
             icon: "page",
